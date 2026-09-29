@@ -21,9 +21,15 @@ Open [the local app](http://127.0.0.1:8787/pantry-demo/). The server binds to lo
 
 The preview implements the selector reads/writes these screens need, including stale ETag rejection. It does not implement Pagelove authorization, schemas, uniqueness, or other server-side policy. A static file server can display the UI but cannot save records.
 
-## Deploy to Pagelove
+## Install from the Pagelove console
 
-`public/` is the complete deployment directory. Upload **its contents** to the root of a new Pagelove host, preserving `pantry-demo/` and `assets/`. The root page redirects to `/pantry-demo/`.
+Pantry is in the console's template catalogue. Open an empty host in the console, choose Pantry and select Add template. The console copies the contents of `site/` to the host root.
+
+`pagelove.html` describes the template to the console. It is never installed.
+
+## Deploy to Pagelove by hand
+
+`site/` is the complete deployment directory. Upload **its contents** to the root of a new Pagelove host, preserving `pantry-demo/` and `assets/`. The root page redirects to `/pantry-demo/`.
 
 1. Get the host's exact WebDAV URL from the Pagelove console.
 2. Authenticate to the console and WebDAV with `Authorization: Bearer <your console API key>`. Keep the key outside the repository.
