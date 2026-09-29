@@ -6,7 +6,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM } = require('jsdom');
-const appRoot = path.resolve(__dirname, '../public/pantry-demo');
+const appRoot = path.resolve(__dirname, '../site/pantry-demo');
 const html = fs.readFileSync(path.join(appRoot, 'index.html'), 'utf8');
 const source = fs.readFileSync(path.join(appRoot, 'app.js'), 'utf8');
 
