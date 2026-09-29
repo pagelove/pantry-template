@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+.preview-state/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
